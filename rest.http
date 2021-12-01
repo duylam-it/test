@@ -1,0 +1,90 @@
+### Register POST
+POST  http://localhost:8000/user/register
+Content-Type: application/json
+
+{
+    "name": "Duy Lam",
+    "email": "dl.duylam.2000@gmail.com",
+    "password": "Duylam1302@@@",
+    "birthday": "13/02/2000",
+    "gender": "male",
+    "code": "843352"
+}
+
+### Login POST
+POST  http://localhost:8000/user/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin123"
+}
+
+### Chatroom POST
+POST  http://localhost/chatroom
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTA5NDQ3MWM5MGQ4MzNiMzlkYmRmMSIsImlhdCI6MTYzMjc0MDc5NX0.3wMQUgiLQbRj-tQrXy34ywUtrr8CxGwAilcMaGQ3Tl8
+
+{
+    "name": "Helloy"
+}
+
+### Error GET
+GET http://localhost:8080/xyz/
+
+### Test GET
+GET http://localhost:8080/user
+
+### OTP POST
+POST http://localhost:8000/otp
+Content-Type: application/json
+
+{
+  "email": "dl.duylam.2000@gmail.com"
+}
+
+### Check OTP POST
+POST http://localhost:8080/otp/check
+Content-Type: application/json
+
+{
+  "email": "vixel52344@gyn5.com",
+  "code": "218402"
+}
+
+### Create Room POST
+POST http://localhost:8000/room/create
+Content-Type: application/json
+
+{
+  "name": "Share",
+  "picURL": "https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/257802123_612067726602923_2871510010847099947_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=825194&_nc_ohc=ST0PpDAzmJ8AX_mHjok&_nc_ht=scontent.fvca1-1.fna&oh=5a87a627e04a4aeb8519f72549288337&oe=619E5CBE",
+  "type": "single",
+  "users": ["123456", "123456789"]
+}
+
+### Delete Room POST
+POST http://localhost:8000/room/delete
+Content-Type: application/json
+
+{
+  "_id": "619b1055ecb7a8661ecc6a8d"
+}
+
+### Add msg POST
+POST http://localhost:8000/room/addMsg
+Content-Type: application/json
+
+{
+  "_id": "619b10c4be4d939add84bcee",
+  "uid": "61a1a8d42508206007479ba7",
+  "message": "This is a message 0169"
+}
+
+### Get messages POST
+POST http://localhost:8000/room/getAMsg
+Content-Type: application/json
+
+{
+  "_id": "619b10c4be4d939add84bcee"
+}
