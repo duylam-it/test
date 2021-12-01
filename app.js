@@ -10,8 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Logger
-const log = require('morgan');
-app.use(log('dev'));
+
 
 // Setup Cookie Parser
 app.use(cookieParser());
